@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Armenian&display=swap");
+
+@font-face {
+  font-family: "PoqrikDzeragir";
+  src: url("./poqrik.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scrollbar-width: thin;
+  background-color: black;
+}
+
+body {
+  font-family: "PoqrikDzeragir", serif;
+  font-size: 34px;
+  margin: 0;
+  background: url("./background2.png") center / cover no-repeat fixed;
+  transition: filter 2.5s ease-in-out;
+}
+
+.state-depressed {
+  filter: grayscale(60%) contrast(90%) brightness(95%);
+}
+
+header {
+  font-family: "Noto Sans Armenian", sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgb(255, 255, 255) 90%, #ffffff00);
+}
+
+header h2 {
+  font-size: 35px;
+  width: 1050px;
+  text-align: justify;
+}
+
+header h2 span {
+  display: inline-block;
+  font-size: 20px;
+  color: rgb(155, 0, 0);
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-left: 500px;
+  padding-right: 400px;
+  padding-top: 50vh;
+  padding-bottom: 200px;
+}
+
+.paper-wrapper {
+  position: relative;
+  margin-top: 10vh;
+  height: 100vh;
+  margin-bottom: 70vh;
+}
+
+.paper-wrapper:last-child {
+  margin-bottom: 10vh;
+}
+
+.sticky-group {
+  position: sticky;
+  top: 50vh;
+}
+
+.sticky-group > * {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.paper {
+  width: 700px;
+  padding: 7rem 2rem 3rem 76px;
+  text-indent: 24px;
+  background-repeat: no-repeat;
+  background-position: -35px -83px;
+  background-image: url(./paperlike3.png);
+  background-size: 239%;
+  transform: rotate(-1deg) translateY(-50%);
+  border-radius: 2px;
+  line-height: 1.185;
+  letter-spacing: 2px;
+  z-index: 2;
+}
+
+.paper .date {
+  position: absolute;
+  left: 78px;
+  top: 32px;
+}
+
+.paper-wrapper:nth-child(even) {
+  align-self: flex-end;
+}
+
+.paper-wrapper:nth-child(even) .paper {
+  transform: rotate(1deg) translateY(-50%);
+}
+
+.sticky-group img {
+  transform: rotate(3deg) translateY(-50%);
+  width: 400px;
+  position: absolute;
+  top: 0;
+  right: -70px;
+}
+
+.paper-wrapper:nth-child(even) .sticky-group img {
+  transform: rotate(-3deg) translateY(-50%);
+  left: -380px;
+}
